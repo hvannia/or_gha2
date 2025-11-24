@@ -19,6 +19,7 @@ jobs:
            echo "The time of the greeting was at: ${{steps.print-to-log.outputs.time}}"
   secondjob:
     runs-on: ubuntu-latest
+    needs: firstjob
     steps:
       - name: secondJob script
         shell: bash
